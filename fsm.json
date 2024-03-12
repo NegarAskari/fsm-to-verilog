@@ -1,0 +1,8 @@
+{
+    "inputs": ["x", "y"],
+    "outputs": ["A", "B"],
+    "states": ["a", "b", "c"],
+    "transitions": {"a":[{"dst": "b", "on":"x", "out":"A"}, {"dst": "c", "on":"y", "out":"B"}],
+                    "b":[{"dst": "c", "on":"x", "out":"B"}, {"dst": "a", "on":"y", "out":"A"}],
+                    "c": [{"dst": "b", "on":"x", "out":"B"}, {"dst": "a", "on":"y", "out":"B"}]}
+}
